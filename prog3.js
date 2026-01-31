@@ -38,3 +38,19 @@ function myResult(value){
 
 }
 myFunc(12,25,myResult);
+
+// anonymous function 
+
+let myFun=function(value){
+    console.log(value);
+}
+myFun("AEC College");
+
+// object in jS
+const person={
+    name:"Amit",
+    age:30,
+    address:"Delhi"
+};
+console.log(person);
+console.log(person.name);
