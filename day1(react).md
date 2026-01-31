@@ -12,4 +12,8 @@ React change in Virtual DOM.
  ## function are first class citizens.
  ## variable are immutables.
  ## function have no side effects.
+ ## Components :-
+ Components are function for user  interface.
+ Math function : 
+ input x --> let y=f(x); ---> output number
  
