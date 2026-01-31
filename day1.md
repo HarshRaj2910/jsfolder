@@ -11,7 +11,7 @@ N :- Node JS
 ![alt text](image-1.png)
 
   ##  What is JS?
-  a lightweight programming languages
+  a lightweight programming languages 
 
   ## Data Types:-
   Primitive Data Types :
@@ -27,3 +27,5 @@ N :- Node JS
   1. Object:- {key:"value",anotherkey:"value2"};
   2. Array=[1,23,5]
   3. function()
+## call back function :-
+passed as an arguments to another function .
