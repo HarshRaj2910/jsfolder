@@ -7,6 +7,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Accounts from './pages/Accounts'
 import Profile from './pages/Profile'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -22,9 +23,10 @@ function App() {
             <Route path='accounts' element={<Accounts/>}></Route>
             <Route path='profile' element={<Profile/>}></Route>
           </Route>
-          <Route path='/services' ></Route>
+          <Route path='/services' element={<Services/>}></Route>
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </div>
   )
 }

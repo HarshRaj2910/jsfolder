@@ -1,0 +1,15 @@
+.para {
+    text-align: justify;
+    line-height: 1.5s;
+    padding: 12px;
+}
+.image_row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+}
+.image_row img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
