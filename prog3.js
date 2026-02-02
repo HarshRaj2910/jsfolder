@@ -13,7 +13,7 @@ let disData=()=>{
     console.log("India");
 }
 disData();
-// arrow function with arguments
+// arrow function with arguments  it is also a call back function
 let dispData=(a,b)=>{
     sum=a+b;
     console.log(sum);
