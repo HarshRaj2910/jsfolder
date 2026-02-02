@@ -3,7 +3,8 @@ import React from 'react'
 function Contact() {
   return (
     <div>
-      Contact
+      <Link to=''>Profile</Link>
+      <Link to=''>Accounts</Link>
     </div>
   )
 }
