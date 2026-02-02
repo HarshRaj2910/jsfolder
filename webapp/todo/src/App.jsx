@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import Accounts from './pages/Accounts'
 import Profile from './pages/Profile'
 import Footer from './components/Footer'
+import Services from './Services'
 
 
 function App() {
