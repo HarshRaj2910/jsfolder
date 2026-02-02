@@ -1,3 +1,4 @@
+// sync read file
 const fs=require("fs");
 console.log("First")
  data =fs.readFileSync("college.txt","utf8");

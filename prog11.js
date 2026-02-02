@@ -1,3 +1,4 @@
+// async read file
 const fs=require("fs");
 console.log("Start")
 const data =fs.readFile("college.txt","utf8",(err,data)=>{
