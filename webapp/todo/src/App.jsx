@@ -2,6 +2,10 @@ import React from 'react'
 import Header from './components/Header'
 import Navigation from './components/Navigation'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+
 
 function App() {
   return (
@@ -10,10 +14,10 @@ function App() {
       <BrowserRouter>
         <Navigation/>
         <Routes>
-          <Route path='/' ></Route>
-          <Route path='/about'></Route>
-          <Route path='/contact'></Route>
-          <Route path='/services'></Route>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/about' element={<About/>}></Route>
+          <Route path='/contact' element={<Contact/>}></Route>
+          <Route path='/services' ></Route>
         </Routes>
       </BrowserRouter>
     </div>
