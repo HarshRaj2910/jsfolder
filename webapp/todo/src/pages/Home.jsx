@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../assert/slider_image.png'
+import image from '../assets/slider_image.png'
 function Home() {
   return (
     <div>
