@@ -1,10 +1,13 @@
 import React from 'react'
+import { Outlet,Link } from 'react-router-dom'
+
 
 function Contact() {
   return (
     <div>
-      <Link to=''>Profile</Link>
-      <Link to=''>Accounts</Link>
+      <Link to='profile'>Profile</Link>
+      <Link to='accounts'>Accounts</Link>
+      <Outlet/>
     </div>
   )
 }
