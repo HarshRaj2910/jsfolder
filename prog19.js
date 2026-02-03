@@ -14,11 +14,11 @@ const server=http.createServer((req,res)=>{
         res.writeHead(200,{'Content-Type':'text/html'});
         res.end('<h1>About Page</h1>');
 
-    }else if(path==='/user' && method ==='GET'){
+    }else if(path==='/users' && method ==='GET'){
         const id=parsedUrl.query.id;
         res.writeHead(200,{'Content-Type':'application/json'});
         if(id){
-            res.end(JSON.stringify({id:id,name:'User'+id}));    
+            res.end(JSON.stringify({id:id,name:`User${id}`}));    
         } else {
             res.end(JSON.stringify([
                 {
@@ -33,6 +33,7 @@ const server=http.createServer((req,res)=>{
         req.on('end',()=>{
             let parsedBody;
             try{
+
                 parsedBody=JSON.parseBody(body)
             } catch{
                 parsedBody={raw:body};
@@ -42,4 +43,10 @@ const server=http.createServer((req,res)=>{
         })
 
     }
-})
+    else{
+        res.writeHead(404,{'Content-Type':'text/plain'});
+        res.end('404 Not Found');
+    }
+    }
+);
+server.listen(PORT,()=>console.log('Server started'));
