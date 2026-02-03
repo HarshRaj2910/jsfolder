@@ -37,6 +37,8 @@ const server=http.createServer((req,res)=>{
             } catch{
                 parsedBody={raw:body};
             }
+            res.writeHead(201,{'Content-Type':'application/json'});
+            res.end(JSON.stringify({message:'Data received',data: parsedBody}));
         })
 
     }
