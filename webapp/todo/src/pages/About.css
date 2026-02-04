@@ -31,3 +31,12 @@
     line-height: 1.6;
     max-width: 500px;
 }
+.about-text h2{
+    text-align: left;
+    margin-bottom:10px;
+}
+.about-text p{
+    text-align: justify;
+    line-height:1.6;
+    margin-bottom: 10px;
+}
