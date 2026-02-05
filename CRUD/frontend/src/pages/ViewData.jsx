@@ -28,12 +28,26 @@ function ViewData() {
             setLoading(false);
         }
     }
-    const handleDelete=async (id)=>{ 
-        if(!window.confirm("Are you sure?"))return;
-        const res=await fetch(`http://localhost:5000/api/deleteUser/${id}`,{
-            method:"DELETE"
-        });
-        fetchUser();
+    const handleEdit = (id) => {
+        navigate(`/edit/${id}`);
+    }
+
+    const handleDelete = async (id) => {
+        if (!window.confirm("Are you sure?")) return;
+        try {
+            const res = await fetch(`http://localhost:5000/api/deleteUser/${id}`, {
+                method: "DELETE"
+            });
+            if (res.ok) {
+                fetchUser();
+            } else {
+                const err = await res.json();
+                alert(err.message || 'Delete failed');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Delete failed');
+        }
     }
     if(loading) return <p>Loading...</p>;
   return (
@@ -57,9 +71,13 @@ function ViewData() {
                             <td>{users.email}</td>
                             <td>{users.country}</td>
                             <td>{users.gender}</td>
-                            <td><button className='btn btn-edit'>Edit</button>
-                            <button className='btn btn-delete'
-                            onClick={ ()=>handleDelete(users._id)}>Delete</button></td>
+                            <td>
+                                <button
+                                    onClick={() => handleEdit(users._id)}
+                                    className='btn btn-edit'>Edit</button>
+                                <button className='btn btn-delete'
+                                    onClick={() => handleDelete(users._id)}>Delete</button>
+                            </td>
                         </tr>
                     ))
                 }

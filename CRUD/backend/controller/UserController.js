@@ -37,14 +37,13 @@ const getUserById=async (req,res)=>{
 }
 
 // update user 
-const updateUser=async (req,res)=> {
-    try{
-        const updateUser=await User.findByIdAndUpdate(req.params.id,req.body,{new:true});
-        if(!updateUser)
-            return res.status(404).json({error:err.message});
-    } catch(err){
-        res.status(500).json({error:err.message});
-
+const updateUser = async (req, res) => {
+    try {
+        const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!updatedUser) return res.status(404).json({ message: 'User not found' });
+        res.json(updatedUser);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
     }
 }
 // delete user

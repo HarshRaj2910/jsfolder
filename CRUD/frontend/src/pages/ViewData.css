@@ -1,26 +1,75 @@
-.users-container
-{
-   text-align: center;
-
+.users-container {
+    text-align: center;
+    padding: 20px;
 }
 
-.users-table
-{
+/* Table base */
+.users-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: aquamarine;
     margin: 20px 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
-.users-table thead
-{
-    background-color: blueviolet;
+
+/* Header */
+.users-table thead {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: #ffffff;
 }
-.users.table th,
-.users.table td
-{
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid black;
+
+.users-table th {
+    padding: 14px 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+/* Cells */
+.users-table td {
+    padding: 14px 18px;
+    color: #333;
+    border-bottom: 1px solid #eaeaea;
+}
+
+/* Row hover */
+.users-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.users-table tbody tr:hover {
+    background-color: #f4f8ff;
+    transform: scale(1.01);
+}
+
+/* Zebra striping */
+.users-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Delete button */
+.btn-delete {
+    border: none;
+    color: #fff;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Button hover */
+.btn-delete:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 75, 43, 0.4);
+}
+
+/* Button active */
+.btn-delete:active {
+    transform: scale(0.95);
 }
