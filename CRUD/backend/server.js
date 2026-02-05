@@ -7,6 +7,9 @@ const userRouter=require('./routes/Router')
 const app=express();
 const PORT=5000;
 
+// enable CORS so frontend can call this API
+app.use(cors());
+
 app.use(bodyParser.json())
 
 app.use('/api',userRouter)
