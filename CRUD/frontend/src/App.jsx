@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Link, Route, Routes}from 'react-router-dom'
 import ViewData from './pages/ViewData'
-import AddData from './AddData'
-import EditData from './EditData'
+import AddData from './pages/AddData'
+import EditData from './pages/EditData'
 
 function App() {
   return (
