@@ -60,4 +60,4 @@ const login=async(req,res)=>{  // login function is an asynchronous function tha
         res.status(500).json({message:"Internal server error",success:false});
     }
 }
-model.exports={signup,login};
+module.exports={signup,login};

@@ -15,14 +15,7 @@ const UserSchema=new mongoose.Schema({
         required:true,
         unique:true
     },
-    country:{
-        type:String,
-        required:true 
-    },
-    gender:{
-        type:String,
-        required:true 
-    },
+    
 });
 const UserModel=mongoose.model('users',UserSchema);
 module.exports=UserModel;
