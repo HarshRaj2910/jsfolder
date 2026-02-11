@@ -3,6 +3,7 @@ const cors=require('cors')
 const bodyParser=require('body-parser')
 const mongoose=require('mongoose')
 const userRouter=require('./routes/Router')
+const multer=require("multer")
 
 const app=express();
 const PORT=5000;
@@ -11,6 +12,17 @@ const PORT=5000;
 app.use(cors());
 
 app.use(bodyParser.json())
+app.use('/uploads', express.static('upload')); // serve static files
+
+// configure storage destination and filenames
+const storage=multer.diskStorage({
+    destination:function(req,file,cb){
+        cb(null,'uploads/');
+    },
+    filename:function(req,file,cb){
+        cb(null,Date.now()+'-'+file.originalname);
+    }
+})
 
 app.use('/api',userRouter)
 

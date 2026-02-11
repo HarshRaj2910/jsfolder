@@ -2,6 +2,8 @@
 // first rest api
 
 const User=require("../models/User")
+const multer=require('multer');
+
 const createUser=async(req,res)=>{
     try{
         const {name,email,password,country,gender}=req.body;
